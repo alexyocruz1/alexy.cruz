@@ -1,19 +1,17 @@
 // src/components/Courses.tsx
-const Courses = () => (
-    <section className="bg-white py-16 px-4">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Courses I Have Completed</h2>
-        <ul className="mb-6">
-          <li className="text-lg font-medium mb-2">Course Name 1</li>
-          <li className="text-lg text-gray-700">Platform Name</li>
-        </ul>
-        <ul>
-          <li className="text-lg font-medium mb-2">Course Name 2</li>
-          <li className="text-lg text-gray-700">Platform Name</li>
-        </ul>
-        {/* Add more courses */}
-      </div>
-    </section>
+import React from 'react';
+
+const Courses: React.FC = () => {
+  return (
+    <div className="p-8">
+      <h2 className="text-3xl font-bold mb-4">Courses Completed</h2>
+      <ul className="list-disc list-inside">
+        <li>Course 1</li>
+        <li>Course 2</li>
+        <li>Course 3</li>
+      </ul>
+    </div>
   );
-  
-  export default Courses;
+};
+
+export default Courses;

@@ -1,19 +1,17 @@
 // src/components/Certifications.tsx
-const Certifications = () => (
-    <section className="bg-soft-green text-white py-16 px-4">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Certifications I Have</h2>
-        <ul className="mb-6">
-          <li className="text-lg font-medium mb-2">Certification Name 1</li>
-          <li className="text-lg text-gray-200">Issuing Organization</li>
-        </ul>
-        <ul>
-          <li className="text-lg font-medium mb-2">Certification Name 2</li>
-          <li className="text-lg text-gray-200">Issuing Organization</li>
-        </ul>
-        {/* Add more certifications */}
-      </div>
-    </section>
+import React from 'react';
+
+const Certifications: React.FC = () => {
+  return (
+    <div className="p-8">
+      <h2 className="text-3xl font-bold mb-4">Certifications</h2>
+      <ul className="list-disc list-inside">
+        <li>Certification 1</li>
+        <li>Certification 2</li>
+        <li>Certification 3</li>
+      </ul>
+    </div>
   );
-  
-  export default Certifications;
+};
+
+export default Certifications;

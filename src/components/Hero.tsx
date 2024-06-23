@@ -1,11 +1,15 @@
 // src/components/Hero.tsx
-const Hero = () => (
-    <section className="bg-soft-blue text-white py-16 px-4">
-      <div className="max-w-3xl mx-auto text-center">
+import React from 'react';
+
+const Hero: React.FC = () => {
+  return (
+    <div className="bg-soft-blue text-white min-h-screen flex items-center justify-center">
+      <div className="text-center">
         <h1 className="text-4xl font-bold">Your Name</h1>
-        {/* Add background image if desired */}
+        <p className="mt-4 text-xl">Frontend Developer | UI/UX Designer</p>
       </div>
-    </section>
+    </div>
   );
-  
-  export default Hero;
+};
+
+export default Hero;

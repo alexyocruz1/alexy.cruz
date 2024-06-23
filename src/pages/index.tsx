@@ -1,24 +1,20 @@
-// src/pages/index.tsx (Home Page)
-import NavBar from '../components/NavBar';
+// pages/index.tsx
+import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import About from '../components/About';
-import Experience from '../components/Experience';
-import Companies from '../components/Companies';
-import Certifications from '../components/Certifications';
-import Courses from '../components/Courses';
-import Projects from '../components/Projects';
 
-const Home = () => (
-  <div>
-    <NavBar />
-    <Hero />
-    <About />
-    <Experience />
-    <Companies />
-    <Certifications />
-    <Courses />
-    <Projects />
-  </div>
-);
+const Home: React.FC = () => {
+  return (
+    <div className="bg-gray-100 min-h-screen">
+      <Header />
+      <main>
+        <Hero />
+        {/* Add other sections or content as needed */}
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 export default Home;

@@ -1,16 +1,17 @@
 // src/components/Companies.tsx
-const Companies = () => (
-    <section className="bg-white py-16 px-4">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Companies I Have Worked With</h2>
-        <ul className="grid grid-cols-2 gap-4">
-          <li className="text-lg text-gray-700">Company A</li>
-          <li className="text-lg text-gray-700">Company B</li>
-          <li className="text-lg text-gray-700">Company C</li>
-          {/* Add more companies */}
-        </ul>
-      </div>
-    </section>
+import React from 'react';
+
+const Companies: React.FC = () => {
+  return (
+    <div className="p-8">
+      <h2 className="text-3xl font-bold mb-4">Companies I Have Worked With</h2>
+      <ul className="list-disc list-inside">
+        <li>Company A</li>
+        <li>Company B</li>
+        <li>Company C</li>
+      </ul>
+    </div>
   );
-  
-  export default Companies;
+};
+
+export default Companies;
