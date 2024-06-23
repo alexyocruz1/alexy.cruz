@@ -13,6 +13,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "target": "esnext",
+    "forceConsistentCasingInFileNames": true,
+    "types": ["react", "node"],
     "plugins": [
       {
         "name": "next"

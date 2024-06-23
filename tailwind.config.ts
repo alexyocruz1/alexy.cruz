@@ -1,10 +1,11 @@
 // tailwind.config.ts
-import { defineConfig } from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
-export default defineConfig({
+const config: Config = {
   mode: 'jit',
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false,
+  darkMode: 'class',
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     extend: {
       colors: {
@@ -17,4 +18,6 @@ export default defineConfig({
     extend: {},
   },
   plugins: [],
-});
+};
+
+export default config;
