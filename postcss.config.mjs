@@ -1,8 +1,13 @@
-/** @type {import('postcss-load-config').Config} */
-const config = {
-  plugins: {
-    tailwindcss: {},
-  },
-};
+// postcss.config.mjs
 
-export default config;
+import { defineConfig } from 'postcss';
+import flexbugs from 'postcss-flexbugs-fixes';
+import tailwindcss from 'tailwindcss';
+
+export default defineConfig({
+  plugins: [
+    flexbugs,
+    tailwindcss,
+    // Add other PostCSS plugins here if needed
+  ],
+});
