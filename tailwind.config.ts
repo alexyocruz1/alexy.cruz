@@ -1,37 +1,20 @@
-// tailwind.config.ts
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: 'class',
   content: [
-    './src/pages/**/*.{js,jsx,ts,tsx}',
-    './src/components/**/*.{js,jsx,ts,tsx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      colors: {
-        'soft-blue': '#85d7ff',
-        'soft-green': '#8cffa8',
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
-    spacing: {
-      '8xl': '96rem',
-      '9xl': '128rem',
-    },
-    borderRadius: {
-      '4xl': '2rem',
-    },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
-
 export default config;
