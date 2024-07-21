@@ -1,20 +1,20 @@
 import { NextPage } from 'next';
-import Head from 'next/head';
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'My Portfolio',
+  description: 'My personal portfolio website',
+}
 
 const Home: NextPage = () => {
   return (
-    <div className="container mx-auto p-4">
-      <Head>
-        <title>My Portfolio</title>
-        <meta name="description" content="My personal portfolio website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="text-center">
-        <h1 className="text-4xl font-bold">Welcome to My Portfolio</h1>
-        <p className="mt-4 text-lg">
-          Hi, I'm [Your Name], a [Your Profession].
-        </p>
+    <div>
+      <main className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('/Assets/Home/software-developer-4.jpeg')" }}>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+          <h1 className="text-5xl font-bold">Welcome to My Portfolio</h1>
+          <p className="mt-4 text-lg">Hi, I'm Alexy Cruz, a Full Stack Developer.</p>
+        </div>
       </main>
     </div>
   );

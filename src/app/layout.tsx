@@ -1,6 +1,12 @@
 import '../styles/globals.css';
 import Navbar from '../components/Navbar';
 
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  icons: "/Assets/Main/software-developer.ico",
+}
+
 export default function RootLayout({
   children,
 }: {
