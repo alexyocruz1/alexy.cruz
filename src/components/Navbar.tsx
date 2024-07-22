@@ -16,7 +16,12 @@ const Navbar = () => {
         </li>
         <li>
           <Link href="#tech-stack">
-            <span className="text-white cursor-pointer">My Stack</span>
+            <span className="text-white cursor-pointer">Stack</span>
+          </Link>
+        </li>
+        <li>
+          <Link href="#certifications">
+            <span className="text-white cursor-pointer">Certifications</span>
           </Link>
         </li>
       </ul>
