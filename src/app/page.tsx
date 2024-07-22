@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Layout from '../components/Layout';
 import HomeSection from '../components/HomeSection';
 import AboutSection from '../components/AboutSection';
+import TechStackSection from '../components/TechStackSection';
 
 export const metadata: Metadata = {
   title: 'My Portfolio',
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
     <Layout>
       <HomeSection />
       <AboutSection />
+      <TechStackSection />
     </Layout>
   );
 };
