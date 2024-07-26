@@ -29,6 +29,11 @@ const Navbar = () => {
             <span className="text-white cursor-pointer">Experience</span>
           </Link>
         </li>
+        <li>
+          <Link href="#personal-applications">
+            <span className="text-white cursor-pointer">Personal Applications</span>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

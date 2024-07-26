@@ -6,6 +6,7 @@ import AboutSection from '@/components/AboutSection';
 import TechStackSection from '@/components/TechStackSection';
 import CertificationsSection from '@/components/CertificationsSection';
 import ClientSection from '@/components/ClientSection';
+import PersonalApplications from '@/components/PersonalApplications';
 
 export const metadata: Metadata = {
   title: 'Alexy Cruz | My Portfolio',
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <TechStackSection />
       <CertificationsSection />
       <ClientSection />
+      <PersonalApplications />
     </Layout>
   );
 };
