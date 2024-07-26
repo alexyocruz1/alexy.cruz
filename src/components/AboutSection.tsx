@@ -15,7 +15,7 @@ const AboutSection = () => {
             <div className="mt-6">
               <p className="text-lg font-semibold">Email: <a href="mailto:alexyocruz1@gmail.com" className="text-blue-500">alexyocruz1@gmail.com</a></p>
               <p className="text-lg font-semibold mt-2">Phone: <a href="tel:+529844505332" className="text-blue-500">+52 984 450 5332</a></p>
-              <p className="text-lg font-semibold mt-2">Address: <span className="text-blue-500">Solidaridad, Playa del Carmen, Quintana Roo, Mexico</span></p>
+              <p className="text-lg font-semibold mt-2">Address: <span className="text-blue-500">Playa del Carmen, Quintana Roo, Mexico</span></p>
             </div>
             <div className="mt-6">
               <a

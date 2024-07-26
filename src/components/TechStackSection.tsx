@@ -35,6 +35,10 @@ const TechStackSection = () => {
 
     // DevOps
     { name: 'Heroku', src: '/Assets/Stack/heroku.png' },
+
+    // AB Test
+    { name: 'Optimizely', src: '/Assets/Stack/optimizely.png' },
+    { name: 'AB Tasty', src: '/Assets/Stack/abtasty.png' },
     // Add more technologies as needed
   ];
 

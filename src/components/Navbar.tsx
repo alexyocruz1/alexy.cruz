@@ -24,6 +24,11 @@ const Navbar = () => {
             <span className="text-white cursor-pointer">Certifications</span>
           </Link>
         </li>
+        <li>
+          <Link href="#clients">
+            <span className="text-white cursor-pointer">Experience</span>
+          </Link>
+        </li>
       </ul>
     </nav>
   );
