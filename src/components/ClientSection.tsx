@@ -1,6 +1,6 @@
 'use client'; // Ensure this component is treated as a client component
 
-import { useState, ReactNode } from 'react';
+import { useState, useEffect, useRef, ReactNode } from 'react';
 import Modal from './Modal'; // Assuming Modal is in the same directory
 
 type Client = {
@@ -10,6 +10,10 @@ type Client = {
 };
 
 const ClientSection = () => {
+  const [selectedClient, setSelectedClient] = useState<Client | null>(null);
+  const [visibleIndices, setVisibleIndices] = useState<number[]>([]);
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
+
   const clients: Client[] = [
     {
       name: 'Beaches',
@@ -72,8 +76,6 @@ const ClientSection = () => {
     },
   ];
 
-  const [selectedClient, setSelectedClient] = useState<Client | null>(null);
-
   const openModal = (client: Client) => {
     setSelectedClient(client);
   };
@@ -82,24 +84,57 @@ const ClientSection = () => {
     setSelectedClient(null);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = Number(entry.target.getAttribute('data-index'));
+          if (entry.isIntersecting) {
+            setVisibleIndices((prevIndices) => [...prevIndices, index]);
+          } else {
+            setVisibleIndices((prevIndices) => prevIndices.filter((i) => i !== index));
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Adjusted threshold to 0.5 for more visibility before triggering
+        rootMargin: '0px 0px -25% 0px', // Adjust the root margin to delay the intersection
+      }
+    );
+
+    imageRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section id="clients" className="py-24 bg-white text-gray-900">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-8 lg:px-16 max-w-6xl">
         <h2 className="text-3xl font-bold text-center mb-4">My Experience</h2>
         <p className="text-center mb-20 text-gray-700">
           Projects I've worked on
         </p>
-        <div className="flex flex-wrap justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-12">
           {clients.map((client, index) => (
             <div
               key={index}
+              data-index={index}
+              ref={(el) => {
+                imageRefs.current[index] = el;
+              }}
               onClick={() => openModal(client)}
-              className="w-40 h-40 flex flex-col items-center justify-center text-center cursor-pointer transition-transform transform hover:scale-105"
+              className={`w-40 h-40 flex flex-col items-center justify-center text-center cursor-pointer transition-transform transform ${visibleIndices.includes(index) ? 'grayscale-0 scale-110' : 'grayscale'} lg:grayscale lg:scale-100 lg:hover:grayscale-0 lg:hover:scale-110`}
             >
               <img
                 src={client.image}
                 alt={client.name}
-                className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110"
+                className="w-full h-full object-contain"
               />
             </div>
           ))}
