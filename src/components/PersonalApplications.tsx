@@ -9,7 +9,7 @@ const PersonalApplications = () => {
           Projects I've built
         </p>
         <p className="text-center text-2xl text-gray-700">
-          Coming soon!
+          More to come!
         </p>
       </div>
     </section>

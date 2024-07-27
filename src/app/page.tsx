@@ -8,6 +8,7 @@ import CertificationsSection from '@/components/CertificationsSection';
 import ClientSection from '@/components/ClientSection';
 import PersonalApplications from '@/components/PersonalApplications';
 import ContactMe from '@/components/ContactMe';
+import CV from '@/components/CV';
 
 export const metadata: Metadata = {
   title: 'Alexy Cruz | My Portfolio',
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       <CertificationsSection />
       <ClientSection />
       <PersonalApplications />
+      <CV />
       <ContactMe />
     </Layout>
   );
