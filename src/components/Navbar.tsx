@@ -1,17 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
-    <nav className="bg-gray-800 p-4 fixed w-full z-20">
+    <nav ref={navRef} className="bg-gray-800 p-4 fixed w-full z-20">
       <div className="flex justify-between items-center">
         <div className="text-white text-lg">My Portfolio</div>
         <div className="lg:hidden">
@@ -56,6 +75,11 @@ const Navbar = () => {
         <li className="lg:w-auto">
           <Link href="#contact-me">
             <span className="text-white cursor-pointer block py-2 lg:py-0">Contact Me</span>
+          </Link>
+        </li>
+        <li className="lg:w-auto">
+          <Link href="#cv">
+            <span className="text-white cursor-pointer block py-2 lg:py-0">My CV</span>
           </Link>
         </li>
       </ul>
