@@ -1,6 +1,11 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
+
 const TechStackSection = () => {
+  const [visibleIndices, setVisibleIndices] = useState<number[]>([]);
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
+
   const techStack = [
     // Coding
     { name: 'React JS', src: '/Assets/Stack/React.png' },
@@ -42,23 +47,59 @@ const TechStackSection = () => {
     // Add more technologies as needed
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = Number(entry.target.getAttribute('data-index'));
+          if (entry.isIntersecting) {
+            setVisibleIndices((prevIndices) => [...prevIndices, index]);
+          } else {
+            setVisibleIndices((prevIndices) => prevIndices.filter((i) => i !== index));
+          }
+        });
+      },
+      {
+        threshold: 1, // Trigger when 100% of the element is visible
+        rootMargin: '0px 0px -25% 0px' // Adjust the root margin to delay the intersection
+      }
+    );
+
+    imageRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section
       id="tech-stack"
       className="py-24 bg-white text-gray-900"
     >
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-8 lg:px-16 max-w-6xl">
         <h2 className="text-3xl font-bold text-center mb-4">My Stack</h2>
         <p className="text-center mb-20 text-gray-700">
           Here are some of the technologies and tools I use in my projects.
         </p>
         <div className="flex flex-wrap justify-center gap-12">
           {techStack.map((tech, index) => (
-            <div key={index} className="w-32 h-32 flex items-center justify-center mb-8">
+            <div
+              key={index}
+              data-index={index}
+              ref={(el) => {
+                imageRefs.current[index] = el;
+              }}
+              className={`w-32 h-32 flex items-center justify-center mb-8 transition duration-2000 ${visibleIndices.includes(index) ? 'grayscale-0 scale-110' : 'grayscale'} lg:grayscale lg:scale-100 lg:hover:grayscale-0 lg:hover:scale-110`}
+            >
               <img
                 src={tech.src}
                 alt={tech.name}
-                className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110"
+                className="w-full h-full object-contain"
               />
             </div>
           ))}
