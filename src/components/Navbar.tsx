@@ -34,6 +34,11 @@ const Navbar = () => {
             <span className="text-white cursor-pointer">Personal Applications</span>
           </Link>
         </li>
+        <li>
+          <Link href="#contact-me">
+            <span className="text-white cursor-pointer">Contact Me</span>
+          </Link>
+        </li>
       </ul>
     </nav>
   );
