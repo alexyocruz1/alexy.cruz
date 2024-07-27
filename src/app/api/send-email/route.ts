@@ -6,8 +6,6 @@ export async function POST(req: NextRequest) {
   try {
     const { subject, message } = await req.json();
 
-    console.log('Received request:', { subject, message });
-
     // Create a transporter object using SMTP transport
     const transporter = nodemailer.createTransport({
       host: 'smtp.office365.com',
@@ -27,11 +25,8 @@ export async function POST(req: NextRequest) {
       text: message,
     };
 
-    console.log('Sending email with options:', mailOptions);
-
     // Send email
     await transporter.sendMail(mailOptions);
-    console.log('Email sent successfully');
     return NextResponse.json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);

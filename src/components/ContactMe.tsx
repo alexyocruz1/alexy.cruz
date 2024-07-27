@@ -34,7 +34,7 @@ const ContactMe = () => {
 
   return (
     <section id="contact-me" className="py-24 bg-white text-gray-900">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <h2 className="text-3xl font-bold text-center mb-4">Contact Me</h2>
         <p className="text-center mb-20 text-gray-700">
           Feel free to reach out to me!
@@ -49,7 +49,7 @@ const ContactMe = () => {
               id="subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -61,7 +61,7 @@ const ContactMe = () => {
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               rows={5}
               required
             ></textarea>
