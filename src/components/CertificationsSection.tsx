@@ -1,6 +1,11 @@
 'use client'; // Ensure this component is treated as a client component
 
+import { useState, useEffect, useRef } from 'react';
+
 const CertificationsSection = () => {
+  const [visibleIndices, setVisibleIndices] = useState<number[]>([]);
+  const imageRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+
   const certifications = [
     {
       name: 'Salesforce Administrator',
@@ -45,29 +50,62 @@ const CertificationsSection = () => {
     // Add more certifications as needed
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = Number(entry.target.getAttribute('data-index'));
+          if (entry.isIntersecting) {
+            setVisibleIndices((prevIndices) => [...prevIndices, index]);
+          } else {
+            setVisibleIndices((prevIndices) => prevIndices.filter((i) => i !== index));
+          }
+        });
+      },
+      {
+        threshold: .5, // Adjusted threshold to 0.5 for more visibility before triggering
+        rootMargin: '0px 0px -35% 0px', // Adjust the root margin to delay the intersection
+      }
+    );
+
+    imageRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section
       id="certifications"
       className="py-24 bg-gray-100 text-gray-900"
     >
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-8 lg:px-16 max-w-6xl">
         <h2 className="text-3xl font-bold text-center mb-4">My Certifications</h2>
         <p className="text-center mb-20 text-gray-700">
           Things I've learned on my way 
         </p>
-        <div className="flex flex-wrap justify-center gap-28">
+        <div className="flex flex-wrap justify-center gap-12">
           {certifications.map((cert, index) => (
             <a
               key={index}
+              data-index={index}
+              ref={(el) => {
+                imageRefs.current[index] = el;
+              }}
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-40 h-40 flex flex-col items-center justify-center mb-8 text-center"
+              className={`w-40 h-40 flex flex-col items-center justify-center mb-8 text-center transition duration-2000 ${visibleIndices.includes(index) ? 'grayscale-0 scale-110' : 'grayscale'} lg:grayscale lg:scale-100 lg:hover:grayscale-0 lg:hover:scale-110`}
             >
               <img
                 src={cert.src}
                 alt={cert.name}
-                className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110"
+                className="w-full h-full object-contain"
               />
               <span className="mt-2 text-sm text-gray-700">{cert.name}</span>
             </a>
