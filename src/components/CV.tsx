@@ -106,7 +106,7 @@ const CV = () => {
           {/* Skills */}
           <section className="mb-6 border-t border-gray-300 pt-6">
             <h2 className="text-lg font-bold mb-2">Skills</h2>
-            <div className="space-y-2">
+            <div className="space-y-1">
               <div className="flex items-baseline">
                 <h3 className="text-sm font-bold mr-2">Coding:</h3>
                 <p className="text-xs">React JS, Node JS, JavaScript, TypeScript, Express JS, Java, Next JS, Vue JS, Flutter</p>
@@ -138,6 +138,10 @@ const CV = () => {
               <div className="flex items-baseline">
                 <h3 className="text-sm font-bold mr-2">AB Test:</h3>
                 <p className="text-xs">Optimizely, AB Tasty</p>
+              </div>
+              <div className="flex items-baseline">
+                <h3 className="text-sm font-bold mr-2">Languages:</h3>
+                <p className="text-xs">Spanish, English</p>
               </div>
             </div>
           </section>
