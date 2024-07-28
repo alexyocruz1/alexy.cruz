@@ -44,42 +44,42 @@ const Navbar = () => {
       <ul className={`flex-col lg:flex-row lg:flex lg:space-x-4 justify-center ${isOpen ? 'flex' : 'hidden'} mt-4 lg:mt-0`}>
         <li className="lg:w-auto">
           <Link href="#home">
-            <span className="text-white cursor-pointer block py-2 lg:py-0">Home</span>
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Home</span>
           </Link>
         </li>
         <li className="lg:w-auto">
           <Link href="#about">
-            <span className="text-white cursor-pointer block py-2 lg:py-0">About</span>
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">About</span>
           </Link>
         </li>
         <li className="lg:w-auto">
           <Link href="#tech-stack">
-            <span className="text-white cursor-pointer block py-2 lg:py-0">Stack</span>
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Stack</span>
           </Link>
         </li>
         <li className="lg:w-auto">
           <Link href="#certifications">
-            <span className="text-white cursor-pointer block py-2 lg:py-0">Certifications</span>
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Certifications</span>
           </Link>
         </li>
         <li className="lg:w-auto">
           <Link href="#clients">
-            <span className="text-white cursor-pointer block py-2 lg:py-0">Experience</span>
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Experience</span>
           </Link>
         </li>
         <li className="lg:w-auto">
           <Link href="#personal-applications">
-            <span className="text-white cursor-pointer block py-2 lg:py-0">Personal Applications</span>
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Personal Applications</span>
           </Link>
         </li>
         <li className="lg:w-auto">
           <Link href="#contact-me">
-            <span className="text-white cursor-pointer block py-2 lg:py-0">Contact Me</span>
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Contact Me</span>
           </Link>
         </li>
         <li className="lg:w-auto">
           <Link href="#cv">
-            <span className="text-white cursor-pointer block py-2 lg:py-0">My CV</span>
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">My CV</span>
           </Link>
         </li>
       </ul>
