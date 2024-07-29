@@ -14,7 +14,7 @@ const TechStackSection = () => {
     { name: 'TypeScript', src: '/Assets/Stack/typescript.png' },
     { name: 'Express JS', src: '/Assets/Stack/Expressjs.png' },
     { name: 'Java', src: '/Assets/Stack/java.png' },
-    { name: 'Next JS', src: '/Assets/Stack/nextjs.png' },
+    { name: 'Next JS', src: '/Assets/Stack/Nextjs.png' },
     { name: 'Vue JS', src: '/Assets/Stack/Vuejs.png' },
     { name: 'Flutter', src: '/Assets/Stack/flutter.png' },
 

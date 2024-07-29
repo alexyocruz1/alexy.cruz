@@ -87,10 +87,16 @@ const CV = () => {
           {/* Header */}
           <header className="text-center">
             <h1 className="text-3xl font-bold mb-1">Alexy Omar Cruz Aguilera</h1>
-            <div className="flex justify-center items-center space-x-4 border-t border-b border-gray-300 py-2">
-              <p className="text-xs border-r border-gray-300 pr-4 print:text-xs">Phone: <a href="tel:+529844505332" className="font-bold text-blue-500 hover:underline">+52 984 450 5332</a></p>
-              <p className="text-xs border-r border-gray-300 pr-4 print:text-xs">Email: <a href="mailto:alexyocruz1@gmail.com" className="font-bold text-blue-500 hover:underline">alexyocruz1@gmail.com</a></p>
-              <p className="text-xs">LinkedIn: <a href="https://www.linkedin.com/in/alexy-cruz-72777114b/" className='font-bold text-blue-500 hover:underline'>linkedin.com/in/alexy-cruz</a></p>
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 border-t border-b border-gray-300 py-2">
+              <p className="text-xs sm:border-r border-gray-300 sm:pr-4 print:text-xs">
+                Phone: <a href="tel:+529844505332" className="font-bold text-blue-500 hover:underline">+52 984 450 5332</a>
+              </p>
+              <p className="text-xs sm:border-r border-gray-300 sm:pr-4 print:text-xs">
+                Email: <a href="mailto:alexyocruz1@gmail.com" className="font-bold text-blue-500 hover:underline">alexyocruz1@gmail.com</a>
+              </p>
+              <p className="text-xs">
+                LinkedIn: <a href="https://www.linkedin.com/in/alexy-cruz-72777114b/" className="font-bold text-blue-500 hover:underline">linkedin.com/in/alexy-cruz</a>
+              </p>
             </div>
           </header>
 
