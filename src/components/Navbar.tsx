@@ -75,13 +75,13 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="lg:w-auto">
-          <Link href="#contact-me">
-            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Contact Me</span>
+          <Link href="#cv">
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">My CV</span>
           </Link>
         </li>
         <li className="lg:w-auto">
-          <Link href="#cv">
-            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">My CV</span>
+          <Link href="#contact-me">
+            <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Contact Me</span>
           </Link>
         </li>
       </ul>
