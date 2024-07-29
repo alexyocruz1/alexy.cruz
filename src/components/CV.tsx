@@ -9,7 +9,7 @@ const clients = [
     details: [
       <>Worked directly making changes for <a href="https://beaches.com" target="_blank" rel="noopener noreferrer" className="font-bold text-blue-500 hover:underline">Beaches.com</a></>,
       'Delivered high-priority tasks following a delivery process and the best coding practices',
-      'Publication and planning of releases from development to production environments',
+      'Published and planned releases from development to production environments',
       'Integration of APIs inside the site'
     ],
     image: '/Assets/Experience/beaches.png',
@@ -21,7 +21,7 @@ const clients = [
       <>Led a team for planning and refactoring of <a href="https://sandals.com/weddings/" target="_blank" rel="noopener noreferrer" className="font-bold text-blue-500 hover:underline">Sandals Weddings</a> and all related pages inside the brand</>,
       'Worked on creating experiments with the conversion rate team using AB Tasty and Optimizely',
       'Delivered high-priority tasks following a delivery process and the best coding practices',
-      'Publication and planning of releases from development to production environments',
+      'Published and planned releases from development to production environments',
       'Implemented SEO and accessibility best practices',
       'Integration of APIs inside the site'
     ],
@@ -163,7 +163,7 @@ const CV = () => {
               <ul className="list-disc list-inside text-xs pl-4">
                 <li>Worked directly making changes for <a href="https://beaches.com" target="_blank" rel="noopener noreferrer" className="font-bold">Beaches.com</a> and <a href="https://sandals.com" target="_blank" rel="noopener noreferrer" className="font-bold">Sandals.com</a></li>
                 <li>Delivered high-priority tasks following a delivery process and best coding practices</li>
-                <li>Publication and planning of releases from development to production environments</li>
+                <li>Published and planned releases from development to production environments</li>
                 <li>Integration of APIs inside the site</li>
               </ul>
             </div>
