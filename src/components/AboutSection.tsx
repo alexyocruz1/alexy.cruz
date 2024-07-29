@@ -19,12 +19,15 @@ const AboutSection = () => {
             </div>
             <div className="mt-6 text-center md:text-left">
               <a
-                href="/Assets/About/CV_AlexyCruz.pdf"
+                href="/Assets/About/CV_AlexyCruz_English.pdf"
                 download
                 className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
               >
                 GET MY CV
               </a>
+              <p className="mt-2 italic text-gray-600">
+                This is the same CV you’ll get later in this portfolio but with more style.
+              </p>
             </div>
           </div>
           {/* Photo Column */}

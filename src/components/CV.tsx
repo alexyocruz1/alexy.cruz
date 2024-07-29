@@ -79,7 +79,7 @@ const CV = () => {
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold text-center mb-4">My Curriculum Vitae</h2>
           <p className="text-center mb-20 text-gray-700">
-            Just more about me but more serious
+            Same as the one in my About Me section but more serious
           </p>
         </div>
 

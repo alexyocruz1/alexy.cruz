@@ -9,9 +9,9 @@ const Footer = () => {
         </p>
         <p className="text-sm mt-2">
           More about me:
-          <a href="https://github.com" className="ml-2 text-blue-400 hover:text-blue-600 transition duration-300">Github</a>,
-          <a href="https://linkeding.com" className="ml-2 text-blue-400 hover:text-blue-600 transition duration-300">LinkedIn</a>,
-          <a href="https://instagram.com" className="ml-2 text-blue-400 hover:text-blue-600 transition duration-300">Instagram</a>
+          <a href="https://github.com/alexyocruz1" className="ml-2 text-blue-400 hover:text-blue-600 transition duration-300">Github</a>,
+          <a href="https://www.linkedin.com/in/alexy-cruz-72777114b/" className="ml-2 text-blue-400 hover:text-blue-600 transition duration-300">LinkedIn</a>,
+          <a href="https://www.linkedin.com/in/alexy-cruz-72777114b/" className="ml-2 text-blue-400 hover:text-blue-600 transition duration-300">Instagram</a>
         </p>
       </div>
     </footer>
