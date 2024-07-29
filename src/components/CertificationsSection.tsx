@@ -87,7 +87,7 @@ const CertificationsSection = () => {
       <div className="container mx-auto px-8 lg:px-16 max-w-6xl">
         <h2 className="text-3xl font-bold text-center mb-4">My Certifications</h2>
         <p className="text-center mb-20 text-gray-700">
-          Things I've learned on my way 
+          Things I've learned on my way (Go on and click them)
         </p>
         <div className="flex flex-wrap justify-center gap-12">
           {certifications.map((cert, index) => (

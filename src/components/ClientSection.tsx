@@ -118,7 +118,7 @@ const ClientSection = () => {
       <div className="container mx-auto px-8 lg:px-16 max-w-6xl">
         <h2 className="text-3xl font-bold text-center mb-4">My Experience</h2>
         <p className="text-center mb-20 text-gray-700">
-          Projects I've worked on
+          Projects I've worked on, also clickable
         </p>
         <div className="flex flex-wrap justify-center gap-12">
           {clients.map((client, index) => (
