@@ -40,6 +40,8 @@ const TechStackSection = () => {
 
     // DevOps
     { name: 'Heroku', src: '/Assets/Stack/heroku.png' },
+    { name: 'Vercel', src: '/Assets/Stack/vercel.png' },
+    { name: 'Render', src: '/Assets/Stack/render.png' },
 
     // AB Test
     { name: 'Optimizely', src: '/Assets/Stack/optimizely.png' },

@@ -13,6 +13,12 @@ const PersonalAppsSection = () => {
       documentation: 'https://github.com/alexyocruz1/chat-app-client#readme',
       demo: 'https://alexyocruz1.github.io/chat-app-client',
     },
+    {
+      name: 'Endpoint Scheduler',
+      src: '/Assets/Apps/time-management.png',
+      documentation: 'https://github.com/alexyocruz1/endpoint-scheduler-client#readme',
+      demo: 'https://endpoint-scheduler-client.vercel.app/',
+    },
     // Add more applications as needed
   ];
 
@@ -52,7 +58,7 @@ const PersonalAppsSection = () => {
         <p className="text-center mb-20 text-gray-700">
           Projects I've built
         </p>
-        <div className="flex flex-wrap justify-center gap-12">
+        <div className="flex flex-wrap justify-center gap-20">
           {applications.map((app, index) => (
             <a
               key={index}
