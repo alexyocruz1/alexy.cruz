@@ -19,6 +19,12 @@ const PersonalAppsSection = () => {
       documentation: 'https://github.com/alexyocruz1/endpoint-scheduler-client#readme',
       demo: 'https://endpoint-scheduler-client.vercel.app/',
     },
+    {
+      name: 'Survey App',
+      src: '/Assets/Apps/checklist.png',
+      documentation: 'https://github.com/alexyocruz1/survey-app#readme',
+      demo: 'https://survey-cpwcfyp1b-alexy-cruzs-projects.vercel.app/',
+    },
     // Add more applications as needed
   ];
 
