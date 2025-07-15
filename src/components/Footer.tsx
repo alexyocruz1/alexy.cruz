@@ -13,6 +13,11 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/alexy-cruz-72777114b/" className="ml-2 text-blue-400 hover:text-blue-600 transition duration-300">LinkedIn</a>,
           <a href="https://www.linkedin.com/in/alexy-cruz-72777114b/" className="ml-2 text-blue-400 hover:text-blue-600 transition duration-300">Instagram</a>
         </p>
+        <p className="text-sm mt-2">
+          <a href="/v2" className="text-yellow-400 hover:text-yellow-300 transition duration-300">
+            🚧 Sneak peek at Portfolio v2.0
+          </a>
+        </p>
       </div>
     </footer>
   );
