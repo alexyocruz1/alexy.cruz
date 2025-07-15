@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 
 const PersonalAppsSection = () => {
   const [visibleIndices, setVisibleIndices] = useState<number[]>([]);
-  const imageRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const applications = [
     {
@@ -72,15 +72,12 @@ const PersonalAppsSection = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-20">
           {applications.map((app, index) => (
-            <a
+            <div
               key={index}
               data-index={index}
               ref={(el) => {
                 imageRefs.current[index] = el;
               }}
-              href={app.documentation}
-              target="_blank"
-              rel="noopener noreferrer"
               className={`w-40 h-40 flex flex-col items-center justify-center mb-8 text-center transition duration-2000 ${visibleIndices.includes(index) ? 'grayscale-0 scale-110' : 'grayscale'} lg:grayscale lg:scale-100 lg:hover:grayscale-0 lg:hover:scale-110`}
             >
               <img
@@ -92,7 +89,7 @@ const PersonalAppsSection = () => {
               <div className="mt-2 text-sm text-gray-700 font-bold">
                 <a href={app.documentation} target="_blank" rel="noopener noreferrer" className="hover:underline">Documentation</a> | <a href={app.demo} target="_blank" rel="noopener noreferrer" className="hover:underline">Demo</a>
               </div>
-            </a>
+            </div>
           ))}
         </div>
         <h2 className="text-3xl font-bold text-center mt-16">More to come!</h2>

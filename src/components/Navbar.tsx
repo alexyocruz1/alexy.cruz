@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="text-white text-lg">My Portfolio</div>
         </Link>
         <div className="lg:hidden">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
+          <button type="button" onClick={toggleMenu} className="text-white focus:outline-none" aria-label="Toggle navigation menu">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'}></path>
             </svg>
@@ -69,11 +69,11 @@ const Navbar = () => {
             <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Experience</span>
           </Link>
         </li>
-        <li className="lg:w-auto">
+        {/* <li className="lg:w-auto">
           <Link href="#personal-applications">
             <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">Personal Applications</span>
           </Link>
-        </li>
+        </li> */}
         <li className="lg:w-auto">
           <Link href="#cv">
             <span className="text-white cursor-pointer block py-2 lg:py-0 lg:hover:text-gray-400">My CV</span>

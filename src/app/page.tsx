@@ -6,7 +6,7 @@ import AboutSection from '@/components/AboutSection';
 import TechStackSection from '@/components/TechStackSection';
 import CertificationsSection from '@/components/CertificationsSection';
 import ClientSection from '@/components/ClientSection';
-import PersonalApplications from '@/components/PersonalApplications';
+// import PersonalApplications from '@/components/PersonalApplications';
 import ContactMe from '@/components/ContactMe';
 import CV from '@/components/CV';
 
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <TechStackSection />
       <CertificationsSection />
       <ClientSection />
-      <PersonalApplications />
+      {/* <PersonalApplications /> */}
       <CV />
       <ContactMe />
     </Layout>

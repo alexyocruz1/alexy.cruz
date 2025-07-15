@@ -5,6 +5,32 @@ import { useReactToPrint } from 'react-to-print';
 
 const clients = [
   {
+    name: 'Jaremar',
+    details: [
+      'Optimized high-demand processes using batch jobs, scheduled Apex, and queues',
+      'Refactored legacy code without disrupting business processes',
+      'Redesigned and developed a new mobile application using Flutter (Android/iOS), replacing a legacy system and improving performance and user experience',
+    ],
+    image: '/Assets/Experience/jaremar.png',
+  },
+  {
+    name: 'Cadelga',
+    details: [
+      'Synced SAP and Salesforce applications via Apex',
+      'Optimized high-demand processes using batch jobs, scheduled Apex, and queues',
+    ],
+    image: '/Assets/Experience/cadelga.png',
+  },
+  {
+    name: 'Escuela DelCampo',
+    details: [
+      'Built a high school enrollment system within Salesforce',
+      'Built a high school platform system for staff inside a Salesforce community site',
+      'Built a high school platform system for parents inside a Salesforce community site',
+    ],
+    image: '/Assets/Experience/delcampo.png',
+  },
+  {
     name: 'Beaches',
     details: [
       <>Worked directly making changes for <a href="https://beaches.com" target="_blank" rel="noopener noreferrer" className="font-bold text-blue-500 hover:underline">Beaches.com</a></>,
@@ -30,38 +56,13 @@ const clients = [
   {
     name: 'Experenta',
     details: [
-      'Adapted Salesforce to the company’s daily processes',
+      'Adapted Salesforce to the company\'s daily processes',
       'Integrated multiple external systems into Salesforce, including QuickBooks and SAP',
       'Developed custom apps through Lightning, Apex, and LWC',
       'Migrated information from one system to Salesforce',
       'Configured and set up users and permissions inside Salesforce'
     ],
     image: '/Assets/Experience/experenta.png',
-  },
-  {
-    name: 'Jaremar',
-    details: [
-      'Optimized high-demand processes using batches, scheduled Apex, and queues',
-      'Refactored old code without affecting the company’s processes',
-    ],
-    image: '/Assets/Experience/jaremar.png',
-  },
-  {
-    name: 'Cadelga',
-    details: [
-      'Synchronized SAP application and Salesforce through Apex',
-      'Optimized high-demand processes using batches, scheduled Apex, and queues',
-    ],
-    image: '/Assets/Experience/cadelga.png',
-  },
-  {
-    name: 'DelCampo School',
-    details: [
-      'Built a high school enrollment system inside Salesforce',
-      'Built a high school platform system for staff inside a Salesforce community site',
-      'Built a high school platform system for parents inside a Salesforce community site',
-    ],
-    image: '/Assets/Experience/delcampo.png',
   },
 ];
 
@@ -73,7 +74,7 @@ const CV = () => {
   });
 
   return (
-    <section id="cv" className="py-24 bg-white text-gray-900">
+    <section id="cv" className="py-24 bg-gray-100 text-gray-900">
       <div className="container mx-auto px-8 lg:px-16 max-w-6xl">
         {/* Title and Subtitle */}
         <div className="text-center mb-6">
@@ -87,6 +88,7 @@ const CV = () => {
           {/* Header */}
           <header className="text-center">
             <h1 className="text-3xl font-bold mb-1">Alexy Omar Cruz Aguilera</h1>
+            <p className="text-sm font-semibold text-gray-700 mb-2">Computer Systems Engineer | Full Stack Developer / Salesforce Specialist</p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 border-t border-b border-gray-300 py-2">
               <p className="text-xs sm:border-r border-gray-300 sm:pr-4 print:text-xs">
                 Phone: <a href="tel:+529844505332" className="font-bold text-blue-500 hover:underline">+52 984 450 5332</a>
@@ -94,8 +96,11 @@ const CV = () => {
               <p className="text-xs sm:border-r border-gray-300 sm:pr-4 print:text-xs">
                 Email: <a href="mailto:alexyocruz1@gmail.com" className="font-bold text-blue-500 hover:underline">alexyocruz1@gmail.com</a>
               </p>
-              <p className="text-xs">
+              <p className="text-xs sm:border-r border-gray-300 sm:pr-4 print:text-xs">
                 LinkedIn: <a href="https://www.linkedin.com/in/alexy-cruz-72777114b/" className="font-bold text-blue-500 hover:underline">linkedin.com/in/alexy-cruz</a>
+              </p>
+              <p className="text-xs">
+                GitHub: <a href="https://github.com/alexyocruz1" className="font-bold text-blue-500 hover:underline">github.com/alexyocruz1</a>
               </p>
             </div>
           </header>
@@ -155,18 +160,7 @@ const CV = () => {
           {/* Work Experience */}
           <section className="mb-6 border-t border-gray-300 pt-6">
             <h2 className="text-lg font-bold mb-2">Work Experience</h2>
-            <div className="mb-4">
-              <div className="flex justify-between items-baseline">
-                <h3 className="text-sm font-bold">Frontend Developer at Unique Vacations</h3>
-                <p className="text-xs">March 2021 - Present</p>
-              </div>
-              <ul className="list-disc list-inside text-xs pl-4">
-                <li>Worked directly making changes for <a href="https://beaches.com" target="_blank" rel="noopener noreferrer" className="font-bold">Beaches.com</a> and <a href="https://sandals.com" target="_blank" rel="noopener noreferrer" className="font-bold">Sandals.com</a></li>
-                <li>Delivered high-priority tasks following a delivery process and best coding practices</li>
-                <li>Published and planned releases from development to production environments</li>
-                <li>Integration of APIs inside the site</li>
-              </ul>
-            </div>
+            
             <div className="mb-4">
               <div className="flex justify-between items-baseline">
                 <h3 className="text-sm font-bold">Full Stack Developer / Salesforce Developer at Experenta</h3>
@@ -178,6 +172,22 @@ const CV = () => {
                 <li>Developed custom apps through Lightning, Apex, and LWC</li>
                 <li>Migrated information from one system to Salesforce</li>
                 <li>Configured and set up users and permissions inside Salesforce</li>
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <div className="flex justify-between items-baseline">
+                <h3 className="text-sm font-bold">Frontend Developer at Unique Vacations</h3>
+                <p className="text-xs">March 2021 - July 2025</p>
+              </div>
+              <ul className="list-disc list-inside text-xs pl-4">
+                <li>Worked directly on updates for <a href="https://beaches.com" target="_blank" rel="noopener noreferrer" className="font-bold">Beaches.com</a> and <a href="https://sandals.com" target="_blank" rel="noopener noreferrer" className="font-bold">Sandals.com</a></li>
+                <li>Delivered high-priority tasks following deployment processes and coding best practices</li>
+                <li>Planned and deployed releases from development to production</li>
+                <li>Integrated APIs into the site</li>
+                <li>Planned and implemented new technology architecture for the main site</li>
+                <li>Designed and implemented A/B tests, significantly improving conversion rates in key flows</li>
+                <li>Led a team in the planning and refactoring of <a href="https://sandals.com/weddings/" target="_blank" rel="noopener noreferrer" className="font-bold">Sandals Weddings</a> and all related brand pages</li>
               </ul>
             </div>
           </section>
@@ -210,16 +220,71 @@ const CV = () => {
             </div>
           </section>
 
+          {/* Academic Activities */}
+          <section className="mb-6 border-t border-gray-300 pt-6">
+            <h2 className="text-lg font-bold mb-2">Academic Activities</h2>
+            <div className="mb-4">
+              <div className="flex justify-between items-baseline">
+                <h3 className="text-sm font-bold">President of the Computer Systems Engineering Program</h3>
+                <p className="text-xs">Nov. 2017 - Nov. 2018</p>
+              </div>
+              <p className="text-xs">UNITEC - International Laureate Universities</p>
+            </div>
+            <div className="mb-4">
+              <div className="flex justify-between items-baseline">
+                <h3 className="text-sm font-bold">President of the IEEE Computer Society Chapter</h3>
+                <p className="text-xs">Nov. 2017 - Nov. 2018</p>
+              </div>
+              <p className="text-xs">UNITEC - International Laureate Universities</p>
+            </div>
+            <div className="mb-4">
+              <div className="flex justify-between items-baseline">
+                <h3 className="text-sm font-bold">Lab Instructor</h3>
+                <p className="text-xs">Jun. 2016 - Dec. 2018</p>
+              </div>
+              <p className="text-xs">UNITEC - International Laureate Universities</p>
+            </div>
+            <div className="mb-4">
+              <div className="flex justify-between items-baseline">
+                <h3 className="text-sm font-bold">Research Department Member</h3>
+                <p className="text-xs">Jun. 2016 - Jun. 2017</p>
+              </div>
+              <p className="text-xs">UNITEC - International Laureate Universities</p>
+            </div>
+          </section>
+
           {/* Education */}
           <section className="mb-6 border-t border-gray-300 pt-6">
             <h2 className="text-lg font-bold mb-2">Education</h2>
             <div className="mb-4">
-              <h3 className="text-sm font-bold">Computer System Engineering</h3>
-              <p className="text-xs">UNITEC, Tegucigalpa - Honduras, June 2014 – December 2020</p>
+              <h3 className="text-sm font-bold">Bachelor's in Computer Systems Engineering</h3>
+              <p className="text-xs">UNITEC, International Laureate University, June 2014 – December 2020</p>
+            </div>
+          </section>
+
+          {/* Certifications */}
+          <section className="mb-6 border-t border-gray-300 pt-6">
+            <h2 className="text-lg font-bold mb-2">Certifications</h2>
+            <div className="mb-4">
+              <div className="flex justify-between items-baseline">
+                <h3 className="text-sm font-bold">Salesforce Certified Administrator</h3>
+                <p className="text-xs">December 2020</p>
+              </div>
+              <p className="text-xs">Salesforce</p>
             </div>
             <div className="mb-4">
-              <h3 className="text-sm font-bold">Bachelor of Science and Letters</h3>
-              <p className="text-xs">Ixo School, Tegucigalpa - Honduras, August 2012 – June 2014</p>
+              <div className="flex justify-between items-baseline">
+                <h3 className="text-sm font-bold">Salesforce Certified Platform Developer I</h3>
+                <p className="text-xs">September 2020</p>
+              </div>
+              <p className="text-xs">Salesforce</p>
+            </div>
+            <div className="mb-4">
+              <div className="flex justify-between items-baseline">
+                <h3 className="text-sm font-bold">Salesforce Certified Platform App Builder</h3>
+                <p className="text-xs">June 2020</p>
+              </div>
+              <p className="text-xs">Salesforce</p>
             </div>
           </section>
         </div>
